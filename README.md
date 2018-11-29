@@ -39,9 +39,9 @@ Windows
 runas /netonly /user:domain\user cmd
 ```
 
-## Get DC, useful in Internal Pentest
+## Get Domain Controller name, useful in Internal Pentest
 
 ```cmd
 C:\Users\Kevin> nltest /dclist:DOMAIN
 C:\Users\Kevin> echo %LOGONSERVER%
-``
+```
