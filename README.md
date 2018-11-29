@@ -36,7 +36,7 @@ $ xrandr --addmode Virtual1 1920x1080_60.00
 ## Spawn shell with given user,only for network purpose
 Windows
 ```cmd
-runas /netonly /user:domain\user cmd
+runas /netonly /user:domain\account cmd
 ```
 
 ## Get Domain Controller name, useful in Internal Pentest
