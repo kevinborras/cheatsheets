@@ -39,14 +39,13 @@ Windows
 runas /netonly /user:domain\account cmd
 ```
 
-## Get Domain Controller name, useful in Internal Pentest
+## Useful commands Windows Post Exploitation
 
+**Get Domain Controller name**
 ```cmd
 C:\Users\User> nltest /dclist:DOMAIN
 C:\Users\User> echo %LOGONSERVER%
 ```
-
-## Useful commands Windows Post Exploitation
 
 **Domain Users**
 ```cmd
@@ -58,7 +57,7 @@ C:\Users\User> net users /domain
 C:\Users\User> net groups /domain
 ```
 
-**Users of specific group**
+**List the users of specific group**
 ```cmd
 C:\Users\User> net groups "Domain Admins" /domain
 ```
@@ -88,3 +87,7 @@ C:\Users\User> net localgroup administrators USER /add
 C:\Users\User> net groups "Domain Admins" USER /add
 ```
 
+**Account Password Policy**
+```cmd
+C:\Users\User> net accounts /domain
+```
