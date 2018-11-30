@@ -1,5 +1,5 @@
-# Cheat Sheets
-My cheatsheets
+# Cheat Sheet
+My cheatsheet
 
 ## Add new resolution
 
