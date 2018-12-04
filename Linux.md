@@ -10,3 +10,14 @@ Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hs
 $ xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
 $ xrandr --addmode Virtual1 1920x1080_60.00
 ```
+## Local port forwarding
+
+```bash
+ssh -L 80:127.0.0.1:3306 user@host
+```
+
+## Dynamic Port Forwarding
+
+```bash
+$ ssh -D port user@host
+```
