@@ -16,7 +16,7 @@ $ xrandr --addmode Virtual1 1920x1080_60.00
 ssh -L 80:127.0.0.1:3306 user@host
 ```
 
-## Dynamic Port Forwarding
+## Dynamic port forwarding
 
 ```bash
 $ ssh -D port user@host
