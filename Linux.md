@@ -21,7 +21,7 @@ ssh -L 80:127.0.0.1:3306 user@host
 ```bash
 $ ssh -D port user@host
 ```
-## SSL_ERROR_RX_RECORD_TOO_LONG BURP SUITE
+## BURP SUITE: SSL_ERROR_RX_RECORD_TOO_LONG
 
 There are some problems with the newer versions of Java, we have to use an older version, e.g version 10
 
